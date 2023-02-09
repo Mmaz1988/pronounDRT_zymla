@@ -69,11 +69,10 @@ reflexiveBinding(_,not(_)):- !, fail.
 reflexiveBinding(X,drs(_,Conds)):-
    reflexiveBinding(X,Conds).
 
-reflexiveBinding(X,[rel(_Sym,Subj,Obj)|Conds]):- !,
-	(
+
+reflexiveBinding(X,Conds):- !,
+	
+	 member(rel(_Sym,Subj,Obj),Conds),
 	%    compose(Basic,_Sym,[Subj,Obj]),
-	    Subj==Obj,
-	    X==Obj, !
-	;
-	    reflexiveBinding(X,Conds)
-	).
+	   member(eq(X,Obj),Conds),
+	    X==Subj,!.

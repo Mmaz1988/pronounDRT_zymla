@@ -32,9 +32,9 @@ lexicon(det,_,[its],poss(nonhuman)).
 
 lexicon(noun,witch,[witch],[female]).
 lexicon(noun,wizard,[wizard],[male]).
-%lexicon(noun,human,[human],[organism]).
-%lexicon(noun,female,[female],[human]).
-%lexicon(noun,male,[male],[human]).
+lexicon(noun,human,[human],[organism]).
+lexicon(noun,female,[female],[human]).
+lexicon(noun,male,[male],[human]).
 
 /*
 lexicon(noun,princess,[princess],female).
@@ -135,8 +135,9 @@ lexicon(pn,vincent,[vincent,vega],male).
 lexicon(iv,pretty,[is,pretty],fin).
 lexicon(iv,blush,[blushes],fin).
 
-/*
+
 lexicon(iv,collapse,[collapses],fin).
+lexicon(iv,collapse,[collapse],fin).
 lexicon(iv,collapse,[collapse],inf).
 lexicon(iv,dance,[dances],fin).
 lexicon(iv,dance,[dance],inf).
@@ -157,7 +158,7 @@ lexicon(iv,shriek,[shrieks],fin).
 lexicon(iv,shriek,[shriek],inf).
 lexicon(iv,walk,[walks],fin).
 lexicon(iv,walk,[walk],inf).
-*/
+
 
 /*========================================================================
    Transitive Verbs: lexicon(tv,Symbol,Words,{fin,inf})
@@ -182,7 +183,7 @@ lexicon(tv,create,[create],inf).
 lexicon(tv,melt,[melts],fin).
 lexicon(tv,melt,[melt],inf).
 
-/*
+
 lexicon(tv,clean,[cleans],fin).
 lexicon(tv,clean,[clean],inf).
 lexicon(tv,drink,[drinks],fin).
@@ -217,7 +218,7 @@ lexicon(tv,tell,[tell],inf).
 lexicon(tv,worksfor,[works,for],fin).
 lexicon(tv,worksfor,[work,for],inf).
 
-*/
+
 
 /*========================================================================
    Copula
@@ -242,9 +243,11 @@ lexicon(pro,female,[she],nonrefl).
 lexicon(pro,nonhuman,[it],nonrefl).
 lexicon(pro,male,[him],nonrefl).
 lexicon(pro,female,[her],nonrefl).
+
 lexicon(pro,male,[himself],refl).
 lexicon(pro,female,[herself],refl).
 lexicon(pro,nonhuman,[itself],refl).
+lexicon(pro,human,[they],nonrefl).
 
 /*========================================================================
    Relative Pronouns: lexicon(relpro,_,Words,_)

@@ -21,7 +21,7 @@ pnSem(Sym,Gender,lambda(P,merge(drs([X],[pred(Gender,X),eq(X,Sym)]),app(P,X)))).
 %:-
  %  compose(Cond,Gender,[X]).
 
-proSem(Gender,Type,lambda(P,alfa(X,Type,pred(Gender,X),app(P,X)))).
+proSem(Gender,Type,lambda(P,alfa(X,Type,pred(Gender,X),merge(app(P,Y),drs([Y],[pred(Gender,Y),eq(X,Y)]))))).
 %:-
  %  compose(Cond,Gender,[X]).
 
