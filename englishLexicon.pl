@@ -1,5 +1,4 @@
 /*************************************************************************
-
          name: englishLexicon.pl
       version: November 12, 1997; March 9, 1999.
   description: Lexical entries for a small coverage of English
@@ -10,7 +9,6 @@ English.  Entries have the form lexicon(Cat,Sym,Phrase,Misc), where
 Cat is the syntactic category, Sym the predicate symbol introduced
 by the phrase, Phrase a list of the words that form the phrase, and
 Misc miscellaneous information depending on the the type of entry.
-
 *************************************************************************/
 
 /*========================================================================
@@ -44,7 +42,6 @@ lexicon(noun,reeindeer,[reindeer],animal).
 lexicon(noun,sleigh,[sleigh],[vehicle]).
 lexicon(noun,snowman,[snowman],[organism]).
 lexicon(noun,sunbath,[sunbath],[act]).
-
 
 lexicon(noun,abstraction,[abstraction],[top]).
 lexicon(noun,act,[act],[top]).
@@ -135,9 +132,8 @@ lexicon(pn,vincent,[vincent,vega],male).
 lexicon(iv,pretty,[is,pretty],fin).
 lexicon(iv,blush,[blushes],fin).
 
-
+/*
 lexicon(iv,collapse,[collapses],fin).
-lexicon(iv,collapse,[collapse],fin).
 lexicon(iv,collapse,[collapse],inf).
 lexicon(iv,dance,[dances],fin).
 lexicon(iv,dance,[dance],inf).
@@ -158,7 +154,7 @@ lexicon(iv,shriek,[shrieks],fin).
 lexicon(iv,shriek,[shriek],inf).
 lexicon(iv,walk,[walks],fin).
 lexicon(iv,walk,[walk],inf).
-
+*/
 
 /*========================================================================
    Transitive Verbs: lexicon(tv,Symbol,Words,{fin,inf})
@@ -183,7 +179,7 @@ lexicon(tv,create,[create],inf).
 lexicon(tv,melt,[melts],fin).
 lexicon(tv,melt,[melt],inf).
 
-
+/*
 lexicon(tv,clean,[cleans],fin).
 lexicon(tv,clean,[clean],inf).
 lexicon(tv,drink,[drinks],fin).
@@ -217,8 +213,7 @@ lexicon(tv,tell,[told],fin).
 lexicon(tv,tell,[tell],inf).
 lexicon(tv,worksfor,[works,for],fin).
 lexicon(tv,worksfor,[work,for],inf).
-
-
+*/
 
 /*========================================================================
    Copula
@@ -243,11 +238,9 @@ lexicon(pro,female,[she],nonrefl).
 lexicon(pro,nonhuman,[it],nonrefl).
 lexicon(pro,male,[him],nonrefl).
 lexicon(pro,female,[her],nonrefl).
-
 lexicon(pro,male,[himself],refl).
 lexicon(pro,female,[herself],refl).
 lexicon(pro,nonhuman,[itself],refl).
-lexicon(pro,human,[they],nonrefl).
 
 /*========================================================================
    Relative Pronouns: lexicon(relpro,_,Words,_)
