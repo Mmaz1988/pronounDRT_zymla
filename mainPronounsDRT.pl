@@ -52,11 +52,17 @@ resolveDrs([merge(B1,B2)|A1]-[drs(D,C)|A3]):-
 	append(D1,D2,D),
 	append(C1,C2,C).
 
-resolveDrs([alfa(Referent,Type,Gender,B1)|A1]-A2):-
-	resolveDrs([B1]-[B1Res]),
+resolveDrs([alfa(Referent,refl,Gender,B1)|A1]-A2):-
 	potentialAntecedent(A1,Referent,Gender),
-	properBinding(Type,Referent,B1Res),
+	resolveDrs([B1]-[B1Res]),
+	properBinding(refl,Referent,B1Res),
 	resolveDrs([B1Res|A1]-A2).
+
+resolveDrs([alfa(Referent,nonrefl,Gender,B1)|A1]-A2):-
+%	resolveDrs([B1]-[B1Res]),
+	potentialAntecedent(A1,Referent,Gender),
+	properBinding(nonrefl,Referent,B1),
+	resolveDrs([B1|A1]-A2).
 
 resolveDrs([drs(D1,C1)|A1]-A2):-
 	resolveConds(C1,[drs(D1,[])|A1]-A2).
